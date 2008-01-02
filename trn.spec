@@ -14,6 +14,7 @@ Patch3:		trn-3.6-bool.patch.bz2
 Patch4:		trn-3.6-jbj.patch.bz2
 Patch5:		trn-3.6-rh.patch.bz2 
 
+Buildroot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	byacc, libtermcap-devel
 
 %description
