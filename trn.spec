@@ -1,7 +1,10 @@
+%define Werror_cflags %nil
+%define debug_package %nil
+
 Summary:	A news reader that displays postings in threaded format
 Name:		trn 
 Version:	3.6
-Release:	%mkrel 22
+Release:	%mkrel 21
 License:	Distributable
 Group:		Networking/News
 Url:		http://trn.sourceforge.net/
@@ -14,8 +17,7 @@ Patch3:		trn-3.6-bool.patch.bz2
 Patch4:		trn-3.6-jbj.patch.bz2
 Patch5:		trn-3.6-rh.patch.bz2 
 
-Buildroot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	byacc, libtermcap-devel
+BuildRequires:	byacc, termcap-devel
 
 %description
 Trn is a basic news reader that supports threading. This version is
@@ -38,29 +40,23 @@ postings in threaded format.
 %make CFLAGS="-DI_TIME %optflags"
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/trn
-mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1/
+mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_libdir}/trn
+mkdir -p %{buildroot}%{_mandir}/man1/
 
 chmod 755 filexp
 chmod 755 makedir
 
-make install	rnbin="$RPM_BUILD_ROOT%{_bindir}" \
-		rnlib="$RPM_BUILD_ROOT%{_libdir}/trn" \
-		mansrc="$RPM_BUILD_ROOT%{_mandir}/man1" \
-		installfilexp="$RPM_BUILD_ROOT%{_libdir}/trn/filexp"
+make install	rnbin="%{buildroot}%{_bindir}" \
+		rnlib="%{buildroot}%{_libdir}/trn" \
+		mansrc="%{buildroot}%{_mandir}/man1" \
+		installfilexp="%{buildroot}%{_libdir}/trn/filexp"
 
-chmod 755 $RPM_BUILD_ROOT%{_bindir}/*
-chmod 755 $RPM_BUILD_ROOT%{_libdir}/*
-
-%clean 
-rm -fr $RPM_BUILD_ROOT
+chmod 755 %{buildroot}%{_bindir}/*
+chmod 755 %{buildroot}%{_libdir}/*
 
 %files
-%defattr(-,root,root)
 %doc README INSTALL MANIFEST HINTS.TRN HACKERSGUIDE NEW
 %{_bindir}/*
 %{_libdir}/trn/*
 %{_mandir}/man1/*
-

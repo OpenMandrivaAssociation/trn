@@ -1,3 +1,8 @@
 sources:
-  "trn-3.6.tar.bz2:"	63a7167602e52491e865198322aa4c63aa23c522
-  "trn.wmconfig:"	57cfe34ce42598a557f7ae8af27f3fe2086d6dd0
+  "trn-3.6-bool.patch.bz2": 24f1fa07ca0ea04d8e59a27975de382dcd45458f
+  "trn-3.6-jbj.patch.bz2": cf956054e2a665e63e9f8e97ccd384318da21fa9
+  "trn-3.6-linux.patch.bz2": f6f835fbad48b088e73a69c80a7a60ef9d822a44
+  "trn-3.6-make.patch.bz2": e18a9fbf70151eae190ce81ad0e705e5abc4f752
+  "trn-3.6-rh.patch.bz2": d11b252e93383b388b0e4e0d87f065f86d6578c2
+  "trn-3.6-sigtstp.patch.bz2": 107aa268ae4b735e4ffe73cae6f7b693715c9aac
+  "trn-3.6.tar.bz2": 63a7167602e52491e865198322aa4c63aa23c522
