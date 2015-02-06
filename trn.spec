@@ -4,7 +4,7 @@
 Summary:	A news reader that displays postings in threaded format
 Name:		trn 
 Version:	3.6
-Release:	%mkrel 21
+Release:	22
 License:	Distributable
 Group:		Networking/News
 Url:		http://trn.sourceforge.net/
