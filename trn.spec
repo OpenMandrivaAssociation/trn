@@ -7,7 +7,7 @@ Version:	3.6
 Release:	22
 License:	Distributable
 Group:		Networking/News
-Url:		http://trn.sourceforge.net/
+Url:		https://trn.sourceforge.net/
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/trn-3.6.tar.bz2
 Source1:	trn.wmconfig
 Patch0:		trn-3.6-linux.patch.bz2
